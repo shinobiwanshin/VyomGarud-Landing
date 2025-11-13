@@ -9,8 +9,6 @@ const config = {
     extend: {
       colors: {
         lightHover: "#fcf4ff",
-        darkHover: "#2a004a",
-        darkTheme: "#11001f",
       },
       fontFamily: {
         "dm-sans": ["DM Sans", "sans-serif"],
@@ -24,7 +22,6 @@ const config = {
       },
     },
   },
-  darkMode: "selector",
   plugins: [],
 };
 

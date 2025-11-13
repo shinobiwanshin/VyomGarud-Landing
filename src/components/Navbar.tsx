@@ -1,13 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 
-const Navbar = ({
-  isDarkMode,
-  setIsDarkMode,
-}: {
-  isDarkMode: boolean;
-  setIsDarkMode: (mode: boolean) => void;
-}) => {
+const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef<HTMLUListElement>(null);
 
@@ -41,8 +35,8 @@ const Navbar = ({
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
           isScroll
-            ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20"
-            : ""
+            ? "bg-gray-900/90 backdrop-blur-lg shadow-lg border-b border-gray-800"
+            : "bg-transparent"
         }`}
       >
         <a href="#top" className="font-bold text-2xl text-orange-500">
@@ -52,8 +46,8 @@ const Navbar = ({
         <ul
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
             isScroll
-              ? ""
-              : "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"
+              ? "bg-gray-800/80 border border-gray-700"
+              : "bg-gray-900/60 border border-gray-700"
           }`}
         >
           <li>
@@ -99,16 +93,9 @@ const Navbar = ({
         </ul>
 
         <div className="flex items-center gap-4">
-          <button
-            onClick={() => setIsDarkMode(!isDarkMode)}
-            className="w-6 h-6 flex items-center justify-center"
-          >
-            {isDarkMode ? "☀️" : "🌙"}
-          </button>
-
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full bg-black text-white dark:bg-transparent dark:border-white/50 hover:bg-orange-500 hover:border-orange-500 transition-colors"
+            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-600 rounded-full bg-gray-800 text-white hover:bg-orange-500 hover:border-orange-500 transition-colors"
           >
             Contact
             <span>→</span>
@@ -122,7 +109,7 @@ const Navbar = ({
         {/* Mobile Menu */}
         <ul
           ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-darkHover dark:text-white"
+          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-gray-900 transition duration-500 border-l border-gray-800"
         >
           <div
             className="absolute right-6 top-6 cursor-pointer"

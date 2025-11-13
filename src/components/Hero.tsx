@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "motion/react";
+import { BackgroundLines } from "@/components/ui/background-lines";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+    <BackgroundLines className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
       {/* Background pattern or animation */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#ff7b00] to-transparent opacity-20"></div>
@@ -65,6 +66,6 @@ export default function Hero() {
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         className="absolute bottom-20 right-10 w-3 h-3 bg-[#ff7b00] rounded-full opacity-40"
       ></motion.div>
-    </section>
+    </BackgroundLines>
   );
 }

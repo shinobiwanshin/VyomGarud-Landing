@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const capabilities = [
   {
@@ -31,13 +31,13 @@ const capabilities = [
 
 export default function Capabilities() {
   return (
-    <section className="py-20 px-4 bg-gray-900">
+    <section className="py-20 px-4 bg-gray-900 dark:bg-darkTheme">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+          className="text-4xl md:text-5xl font-bold text-white text-center mb-16 dark:text-white"
         >
           Our Capabilities
         </motion.h2>
@@ -49,15 +49,17 @@ export default function Capabilities() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 border border-gray-700 hover:border-[#ff7b00] group"
+              className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 border border-gray-700 hover:border-[#ff7b00] group dark:bg-darkHover dark:hover:bg-gray-700"
             >
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                 {cap.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">
+              <h3 className="text-xl font-semibold text-white mb-3 dark:text-white">
                 {cap.title}
               </h3>
-              <p className="text-gray-400 leading-relaxed">{cap.description}</p>
+              <p className="text-gray-400 leading-relaxed dark:text-gray-400">
+                {cap.description}
+              </p>
             </motion.div>
           ))}
         </div>

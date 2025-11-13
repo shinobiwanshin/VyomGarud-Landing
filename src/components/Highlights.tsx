@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const highlights = [
   {
@@ -22,13 +22,13 @@ const highlights = [
 
 export default function Highlights() {
   return (
-    <section className="py-20 px-4 bg-gray-800">
+    <section className="py-20 px-4 bg-gray-800 dark:bg-darkHover">
       <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+          className="text-4xl md:text-5xl font-bold text-white text-center mb-16 dark:text-white"
         >
           Key Highlights
         </motion.h2>
@@ -44,10 +44,12 @@ export default function Highlights() {
             >
               <div className="w-4 h-4 bg-[#ff7b00] rounded-full shrink-0"></div>
               <div>
-                <h3 className="text-2xl font-semibold text-white mb-2">
+                <h3 className="text-2xl font-semibold text-white mb-2 dark:text-white">
                   {highlight.title}
                 </h3>
-                <p className="text-gray-400 text-lg">{highlight.description}</p>
+                <p className="text-gray-400 text-lg dark:text-gray-400">
+                  {highlight.description}
+                </p>
               </div>
             </motion.div>
           ))}

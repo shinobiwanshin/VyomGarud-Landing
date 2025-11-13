@@ -93,14 +93,6 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <a
-            href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-600 rounded-full bg-gray-800 text-white hover:bg-orange-500 hover:border-orange-500 transition-colors"
-          >
-            Contact
-            <span>→</span>
-          </a>
-
           <button className="block md:hidden ml-3" onClick={openMenu}>
             <span className="text-2xl">☰</span>
           </button>

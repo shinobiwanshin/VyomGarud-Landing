@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VyomGarud Landing Page
 
-## Getting Started
+A modern, responsive landing page for VyomGarud - a UAV/drone systems company specializing in military-grade unmanned aerial vehicles.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Design**: Dark, futuristic aesthetic with military-grade professionalism
+- **Responsive Layout**: Optimized for all device sizes
+- **Smooth Animations**: Subtle Framer Motion animations for enhanced user experience
+- **TypeScript**: Built with Next.js 16 and TypeScript for type safety
+- **Tailwind CSS**: Utility-first styling with custom dark theme
+
+## 🎨 Design System
+
+- **Colors**: Charcoal (#111827), White (#ffffff), Orange (#ff7b00)
+- **Fonts**: Poppins (primary), Inter, Montserrat
+- **Theme**: Dark mode with orange accents
+
+## 📱 Sections
+
+1. **Hero** - Company branding with compelling tagline and CTAs
+2. **About** - Mission statement and company overview
+3. **Capabilities** - 4 key service areas with icons
+4. **Highlights** - 3 core feature bullets
+5. **Contact** - Contact form and information
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Fonts**: Google Fonts (Poppins, Inter, Montserrat)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd vyomgarud-landing-page
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── layout.tsx      # Root layout with fonts and metadata
+│   ├── page.tsx        # Main landing page
+│   └── globals.css     # Global styles and Tailwind config
+└── components/
+    ├── Hero.tsx        # Hero section
+    ├── About.tsx       # About section
+    ├── Capabilities.tsx # Capabilities grid
+    ├── Highlights.tsx  # Key highlights
+    └── Contact.tsx     # Contact form and footer
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎯 Development Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Components use `'use client'` directive for client-side rendering with Framer Motion
+- Animations trigger on scroll using `whileInView`
+- Responsive design uses Tailwind's mobile-first approach
+- Color scheme uses CSS custom properties for consistency
 
-## Deploy on Vercel
+## 📸 Screenshots
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+_(Add screenshots here)_
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Deployment
+
+Deploy on Vercel, Netlify, or any static hosting platform:
+
+```bash
+npm run build
+```
+
+The `out/` directory contains the production build.
+
+## 📞 Contact
+
+For inquiries: +91 8881444693
+
+## 📝 License
+
+This project is part of the VyomGarud Web Developer Intern Assessment.

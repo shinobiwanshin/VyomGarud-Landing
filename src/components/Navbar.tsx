@@ -1,9 +1,7 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 
 const Navbar = () => {
-  const [isScroll, setIsScroll] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const sideMenuRef = useRef<HTMLUListElement>(null);
 
   const openMenu = () => {
@@ -18,53 +16,14 @@ const Navbar = () => {
     }
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-
-      // Calculate scroll progress (0 to 1)
-      const progress = Math.min(scrollY / (documentHeight - windowHeight), 1);
-      setScrollProgress(progress);
-
-      // Set scroll state for navbar styling
-      if (scrollY > 50) {
-        setIsScroll(true);
-      } else {
-        setIsScroll(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <>
-      <nav
-        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${
-          isScroll
-            ? "bg-gray-900/85 backdrop-blur-xl shadow-xl border-b border-gray-700/50"
-            : "bg-gray-900/20 backdrop-blur-md"
-        }`}
-        style={{
-          backgroundColor: isScroll
-            ? `rgba(17, 24, 39, ${0.85 + scrollProgress * 0.1})`
-            : `rgba(17, 24, 39, ${0.2 + scrollProgress * 0.3})`,
-        }}
-      >
+      <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all duration-300">
         <a href="#top" className="font-bold text-2xl text-orange-500">
           VyomGarud
         </a>
 
-        <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 transition-all duration-300 ${
-            isScroll
-              ? "bg-gray-800/70 border border-gray-700/60 backdrop-blur-sm"
-              : "bg-gray-900/40 border border-gray-700/40 backdrop-blur-sm"
-          }`}
-        >
+        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-gray-900/80 border border-gray-700/60 backdrop-blur-md transition-all duration-300">
           <li>
             <a
               href="#top"

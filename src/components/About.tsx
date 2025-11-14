@@ -21,7 +21,12 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8"
         >
-          We specialize in limitless-range UAVs powered by cellular and LoRa-based hybrid communication, enabling seamless command, control, and multi-drone coordination even in challenging environments. Built with military-grade precision, VyomGarud systems combine cutting-edge avionics, AI-driven telemetry, and secure cloud infrastructure to deliver unmatched situational awareness and mission endurance.
+          We specialize in limitless-range UAVs powered by cellular and
+          LoRa-based hybrid communication, enabling seamless command, control,
+          and multi-drone coordination even in challenging environments. Built
+          with military-grade precision, VyomGarud systems combine cutting-edge
+          avionics, AI-driven telemetry, and secure cloud infrastructure to
+          deliver unmatched situational awareness and mission endurance.
         </motion.p>
 
         <motion.div
@@ -35,11 +40,15 @@ export default function About() {
             <p className="text-gray-400">2025</p>
           </div>
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-orange-500 mb-2">Location</h3>
+            <h3 className="text-2xl font-bold text-orange-500 mb-2">
+              Location
+            </h3>
             <p className="text-gray-400">Bhopal, India</p>
           </div>
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-orange-500 mb-2">Industry</h3>
+            <h3 className="text-2xl font-bold text-orange-500 mb-2">
+              Industry
+            </h3>
             <p className="text-gray-400">IT/Technology & Electronics</p>
           </div>
         </motion.div>
@@ -50,7 +59,9 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-lg text-gray-400 mt-8"
         >
-          At VyomGarud, we believe the future of aerial operations lies in autonomy, resilience, and connectivity—and we are engineering that future today.
+          At VyomGarud, we believe the future of aerial operations lies in
+          autonomy, resilience, and connectivity—and we are engineering that
+          future today.
         </motion.p>
       </div>
     </section>

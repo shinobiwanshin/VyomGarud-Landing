@@ -36,7 +36,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg text-gray-400 mb-12 max-w-xl mx-auto"
         >
-          Limitless-range UAVs powered by cellular and LoRa-based hybrid communication, delivering unmatched situational awareness and mission endurance through military-grade precision and AI-driven technology.
+          Limitless-range UAVs powered by cellular and LoRa-based hybrid
+          communication, delivering unmatched situational awareness and mission
+          endurance through military-grade precision and AI-driven technology.
         </motion.p>
 
         <motion.div
